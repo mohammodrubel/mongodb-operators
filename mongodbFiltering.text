@@ -1,0 +1,76 @@
+mongodb filtering 
+যদি আমাদের একটা এরে থেকে  কিছু কে এক্সেস করতে চাই তাহলে আমরা ব্যাবহার করি 
+db.test.find({gender:'Male'})
+
+
+এবং এর মদ্ধে তো অনেক কিছুই থাকবে একটা অবজেক্ট এর মদ্ধে সেক্ষেত্রে আমার যদি নিদ্রিষ্ট কিছু জিনিষ দরকার হয় এবং যা দরকার নাই তা যদি আমরা ইগনোর করতে চাই তাহলে আমরা যেভাবে করতে পারি তা হলো 
+db.test.find({gender:'Male'},{name:1,age:1,email:1})
+
+
+example হিসাবে একটা অব্জেক্ট দিয়ে দেওয়া হলো 
+{
+	"_id" : ObjectId("6406ad63fc13ae5a40000065"),
+	"name" : {
+		"firstName" : "Mariele",
+		"lastName" : "Dangl"
+	},
+	"email" : "mdangl1@odnoklassniki.ru",
+	"phone" : "(167) 7775715",
+	"gender" : "Female",
+	"age" : 21,
+	"birthday" : "3/13/2022",
+	"address" : {
+		"street" : "1188 Lerdahl Point",
+		"city" : "Dongxi",
+		"country" : "China"
+	},
+	"company" : "Skipfire",
+	"favoutiteColor" : "Aquamarine",
+	"friends" : [ "Najmus Sakib", "Mir Hussain", "Fahim Ahammed Firoz", "Tanmoy Parvez", "Abdur Rakib" ],
+	"occupation" : "Food Chemist",
+	"interests" : [ "Cooking", "Writing", "Reading" ],
+	"skills" : [
+		{
+			"name" : "JAVASCRIPT",
+			"level" : "Expert",
+			"isLearning" : false
+		},
+		{
+			"name" : "C#",
+			"level" : "Expert",
+			"isLearning" : true
+		},
+		{
+			"name" : "PYTHON",
+			"level" : "Beginner",
+			"isLearning" : false
+		},
+		{
+			"name" : "GO",
+			"level" : "Expert",
+			"isLearning" : true
+		},
+		{
+			"name" : "GO",
+			"level" : "Beginner",
+			"isLearning" : true
+		}
+	],
+	"education" : [
+		{
+			"degree" : "Doctor of Philosophy",
+			"major" : "Art",
+			"institute" : "Technische Universität Dresden",
+			"year" : 2003
+		},
+		{
+			"degree" : "Master of Science",
+			"major" : "Communications",
+			"institute" : "West Liberty State College",
+			"year" : 2011
+		}
+	],
+	"languages" : [ "German", "Catalan", "Thai" ],
+	"ipAddress" : "206.108.151.156",
+	"salary" : 363
+}
